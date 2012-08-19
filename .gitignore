@@ -1,2 +1,7 @@
 stages
+.bundle
 vendor/checkouts
+vendor/bundle
+bin
+.rvmrc
+log

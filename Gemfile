@@ -13,6 +13,6 @@ def gem_dev(gem_name,options={})
   end
 end
 
-gem "ruby-debug19"
+gem "ruby-debug"
 gem "capistrano"
 gem_dev 'cap-recipes', :git => "git://github.com:demandchain/cap-recipes.git", :require => false

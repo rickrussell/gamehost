@@ -1,0 +1,2 @@
+rvm use ree-1.8.7-2012.02@gamehost --create
+export USE_BUNDLER=force
