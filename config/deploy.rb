@@ -26,7 +26,9 @@ Dir[File.join(File.dirname(__FILE__), '../recipes/**/*.rb')].each { |task| requi
 
 set :application, "gamehost"
 ssh_options[:forward_agent] = true
+#ssh_options[:verbose] = :debug 
 default_run_options[:pty] = true
+
 
 
 # =============================================================================
