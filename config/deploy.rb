@@ -29,11 +29,16 @@ ssh_options[:forward_agent] = true
 #ssh_options[:verbose] = :debug 
 default_run_options[:pty] = true
 
-
-
 # =============================================================================
 # PROJECT STAGES
 # =============================================================================
 
 Dir[File.join(File.dirname(__FILE__), '../stages/**/*.rb')].each { |task| require(task) }
 
+# =============================================================================
+# SECRETS
+# =============================================================================
+
+Dir[File.join(File.dirname(__FILE__),'secrets.rb')].each do |file|
+  require file
+end

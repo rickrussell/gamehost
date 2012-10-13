@@ -2,6 +2,7 @@ stages
 .bundle
 vendor/checkouts
 vendor/bundle
+config/secrets.rb
 bin
 .rvmrc
 log
