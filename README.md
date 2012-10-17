@@ -63,4 +63,4 @@ or for a UGC Highlander Server:
 ```bash
 bin/cap tf2_ugc hlds:install
 ```
-You should see output from Capistrano.  Take a break, let Steam install/update and eat a [Sandvich!](http://wiki.teamfortress.com/w/images/thumb/9/95/Sandvich.png/250px-Sandvich.png)
+You should see output from Capistrano.  Take a break, let Steam install/update and eat a Sandvich! ![Sandvich!](http://wiki.teamfortress.com/w/images/thumb/9/95/Sandvich.png/250px-Sandvich.png)
