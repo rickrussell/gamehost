@@ -2,9 +2,11 @@ gamehost
 ========
 ![Valve Logo](http://valvesoftware.com/images/header_logo.png) Un-Official Valve Half-Life Dedicated Server Deployment using Ruby Capistrano Scripts
 
-For now we just have 2 stages; 
+
+For now we just have 2 stages;
+
 1. Tf2 Standard Server
-1. Tf2 UGC Highlander Server
+2. Tf2 UGC Highlander Server
 
 You will need a [MacOSX Ruby Development Environment](https://github.com/rickrussell/cap-recipes/wiki/Mac-osx-ruby-development-environment) or a Linux Ruby Development Environment with RVM
 
@@ -28,7 +30,7 @@ cp config/secrets.rb.template config/secrets.rb
 #### Set up secrets.rb
 Use your editor and configure your secrets.rb.  You need to make sure to set all options.  
 ```bash
-subl config/secrets.rb
+edit config/secrets.rb
 ```
 ```ruby
 def tf2_standard
@@ -44,7 +46,7 @@ end
 #### Prepare Stages & Roles
 Setup your stage files. Make sure ports, players and fps settings are correct.
 ```bash
-subl stages/tf2_stadard.rb
+edit stages/tf2_stadard.rb
 ```
 ```ruby
 #HLDS Custom Settings (requires)
