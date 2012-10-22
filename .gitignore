@@ -6,3 +6,9 @@ config/secrets.rb
 bin
 .rvmrc
 log
+recipes/hlds/ugc*
+recipes/ssh/public_keys/*.pub
+recipes/ssh/public_keys_stages/*/*.pub
+recipes/ssh/public_keys_groups/*/*.pub
+recipes/.DS_Store
+recipes/hlds/.DS_Store

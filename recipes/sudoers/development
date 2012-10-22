@@ -1,0 +1,50 @@
+# /etc/sudoers
+# http://cksum.org/blog/149-dpkg-warning-ldconfig-not-found-in-path-or-not-executable
+Defaults     env_reset
+Defaults     secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+Defaults     always_set_home
+Defaults     insults
+Defaults     syslog=auth
+Defaults     log_year, logfile=/var/log/rsyslog
+Defaults     editor=/usr/bin/vi
+Defaults     env_keep='SSH_AUTH_SOCK'
+Defaults     env_keep += "DEBCONF_TERSE"
+Defaults     env_keep += "DEBIAN_PRIORITY"
+Defaults     env_keep += "DEBIAN_FRONTEND"
+Defaults:SYSOPS runas_default=root
+
+# Host alias specification
+
+# RunAs Aliases
+
+# User alias specification
+User_Alias      NETOPS  = %syseng
+User_Alias      DBA  = %sysdba
+
+<% %w(SYSOPS DEVELOPERS RESTRICTED).each do |spec| %>
+<%="User_Alias   #{spec} = #{fetch("sudoers_#{spec.downcase}")}" unless fetch("sudoers_#{spec.downcase}").empty?%>
+<% end %>
+
+# Cmnd alias specification
+
+# Basic Commands
+
+# User privilege specification
+root         ALL  = (ALL) ALL
+<% if dev_password %>
+dev          ALL  = (ALL) ALL
+<% else %>
+dev          ALL  = (ALL) NOPASSWD : ALL
+<% end %>
+vagrant      ALL  = (ALL) NOPASSWD : ALL
+
+
+# Sudo Groups and Permissions
+%admin          ALL  = (ALL) ALL
+SYSOPS          ALL  = (ALL) ALL
+DEVELOPERS      ALL  = (ALL) ALL
+DBA             ALL  = /bin/su - oracle
+
+# ubuntu user is default user in ec2-images.
+# It needs passwordless sudo functionality.
+ubuntu       ALL  = (ALL) NOPASSWD : ALL
