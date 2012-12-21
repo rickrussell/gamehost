@@ -9,6 +9,10 @@ hostname <%=hlds_config_hostname%>
 
 <%= hlds_config_sv_password ?  "sv_password #{hlds_config_sv_password}" : '' %>
 
+sv_tags "event247"
+sv_tags "eventmix"
+sv_tags "eventmix,ƒc.,PDT"
+
 // Overrides the max players reported to prospective clients
 sv_visiblemaxplayers <%= maxplayers %>
 
