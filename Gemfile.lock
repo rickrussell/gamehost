@@ -1,6 +1,5 @@
-GIT
-  remote: git@github.com:rickrussell/cap-recipes.git
-  revision: 4986e98c1717ac3cb7c1fbd38f2e6c2da8b82885
+PATH
+  remote: vendor/checkouts/cap-recipes
   specs:
     cap-recipes (2.2.0)
       capistrano

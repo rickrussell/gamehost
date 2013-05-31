@@ -13,7 +13,7 @@ Capistrano::Configuration.instance(true).load do
 
     #csgo_ds Custom Settings (requires)
     set :fps_max, "1000"
-    set :maxplayers, "24"
+    set :maxplayers, "16"
     set :server_port, "27015"
     set :csgo_ds_mapcycle_array, %w(cs_italy de_dust de_aztec cs_office de_dust2 de_train de_inferno de_nuke)
     set :csgo_ds_mapcycle, "cs_italy de_dust de_aztec cs_office de_dust2 de_train de_inferno de_nuke"
